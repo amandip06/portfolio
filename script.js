@@ -334,18 +334,25 @@ document.getElementById('back-to-top').addEventListener('click', () => {
     if (!name || !email || !message) return;
     if (!email.includes('@')) return;
 
-    // Simulate sending (replace with actual backend / EmailJS etc.)
-    const btn = form.querySelector('.btn-primary');
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    btn.disabled  = true;
+    // Construct WhatsApp message
+    const whatsappNumber = '+919831262611';
+    const whatsappMessage = `New Contact Form Message:\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`;
+    const whatsappURL = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`;
 
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
+    const btn = form.querySelector('.btn-primary');
+    btn.innerHTML = '<span>Message Sent!</span><i class="fas fa-check"></i>';
+    btn.disabled  = true;
+    form.reset();
+    success.style.display = 'block';
     setTimeout(() => {
+      success.style.display = 'none';
       btn.innerHTML  = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
       btn.disabled   = false;
-      form.reset();
-      success.style.display = 'block';
-      setTimeout(() => { success.style.display = 'none'; }, 5000);
-    }, 1800);
+    }, 5000);
   });
 })();
 
@@ -405,3 +412,4 @@ window.addEventListener('load', () => {
   // Trigger any initial reveal checks
   window.dispatchEvent(new Event('scroll'));
 });
+
