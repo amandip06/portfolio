@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amandip Singh — CS & AI Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ========== CANVAS (Particle Background) ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== CURSOR ========== -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-tag reveal-tag">
+        <span class="dot"></span> Available for Internships
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line">Amandip</span>
+        <span class="name-line accent-line">Singh</span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-prefix">// </span>
+        <span class="typed-text" id="typed-text"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+      <p class="hero-uni">
+        <i class="fas fa-university"></i> Central University of Andhra Pradesh
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>View Projects</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Contact Me</span>
+        </a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Floating geometric shapes -->
+    <div class="geo-shapes">
+      <div class="geo g1"></div>
+      <div class="geo g2"></div>
+      <div class="geo g3"></div>
+      <div class="geo g4"></div>
+      <div class="geo g5"></div>
+    </div>
+
+    <!-- Glitch grid lines -->
+    <div class="grid-lines">
+      <div class="vline v1"></div>
+      <div class="vline v2"></div>
+      <div class="hline h1"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="avatar-card">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">
+              <i class="fas fa-user-astronaut avatar-icon"></i>
+            </div>
+            <div class="avatar-status">
+              <span class="status-dot"></span> Actively Learning
+            </div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <p class="about-lead">
+            Hey! I'm <strong>Amandip Singh</strong> — a passionate Computer Science & Artificial Intelligence student with a deep love for building things that live on the internet and beyond.
+          </p>
+          <p>
+            Currently pursuing my <strong>B.Sc. (Hons) in CS & AI</strong> at Central University of Andhra Pradesh, I'm fascinated by the intersection of intelligent systems and elegant code. From crafting sleek UIs to exploring machine learning models, I'm always curious and always coding.
+          </p>
+          <p>
+            My journey is driven by curiosity — whether it's understanding how neural networks mimic the brain or debugging a stubborn algorithm at 2 AM. I believe technology should be both powerful and accessible.
+          </p>
+          <div class="about-tags">
+            <span class="tag">AI Enthusiast</span>
+            <span class="tag">Full Stack Learner</span>
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Open Source</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat counters -->
+      <div class="stats-row reveal">
+        <div class="stat-card">
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Projects Built</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Certifications</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Languages Known</p>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="2">0</span>
+          <span class="stat-suffix">+</span>
+          <p class="stat-label">Years Coding</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 — Skills</span>
+        <h2 class="section-title">What I Work With</h2>
+      </div>
+
+      <!-- Skill cards grid -->
+      <div class="skills-grid reveal">
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fab fa-html5"></i></div>
+          <h4>HTML5</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="90"></div></div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fab fa-css3-alt"></i></div>
+          <h4>CSS3</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="85"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fab fa-js"></i></div>
+          <h4>JavaScript</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="78"></div></div>
+          <span class="skill-percent">78%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fab fa-java"></i></div>
+          <h4>Java</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="72"></div></div>
+          <span class="skill-percent">72%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fab fa-python"></i></div>
+          <h4>Python</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="80"></div></div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+          <h4>C++</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="68"></div></div>
+          <span class="skill-percent">68%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+          <h4>AI / ML Basics</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="65"></div></div>
+          <span class="skill-percent">65%</span>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon-wrap"><i class="fas fa-puzzle-piece"></i></div>
+          <h4>Problem Solving</h4>
+          <div class="skill-bar-track"><div class="skill-bar" data-width="88"></div></div>
+          <span class="skill-percent">88%</span>
+        </div>
+      </div>
+
+      <!-- Tech stack badges -->
+      <div class="tech-badges reveal">
+        <span class="badge">Git &amp; GitHub</span>
+        <span class="badge">Linux</span>
+        <span class="badge">Data Structures</span>
+        <span class="badge">Algorithms</span>
+        <span class="badge">Neural Networks</span>
+        <span class="badge">SQL</span>
+        <span class="badge">OOP</span>
+        <span class="badge">REST APIs</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 — Education</span>
+        <h2 class="section-title">Academic Journey</h2>
+      </div>
+      <div class="timeline">
+        <!-- Timeline item 1 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-line"></div>
+          <div class="tl-card">
+            <div class="tl-year">2023 — Present</div>
+            <h3 class="tl-degree">B.Sc. (Hons) in Computer Science &amp; Artificial Intelligence</h3>
+            <p class="tl-institution">
+              <i class="fas fa-university"></i> Central University of Andhra Pradesh
+            </p>
+            <p class="tl-desc">Pursuing an honours degree blending foundational computer science with cutting-edge artificial intelligence. Coursework spans algorithms, machine learning, data structures, neural networks, and software engineering.</p>
+            <div class="tl-tags">
+              <span>AI &amp; ML</span>
+              <span>Algorithms</span>
+              <span>Software Eng.</span>
+            </div>
+          </div>
+        </div>
+        <!-- Timeline item 2 -->
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-year">2021 — 2023</div>
+            <h3 class="tl-degree">Higher Secondary Education (12th Grade)</h3>
+            <p class="tl-institution">
+              <i class="fas fa-school"></i> Senior Secondary School
+            </p>
+            <p class="tl-desc">Completed higher secondary with a focus on Physics, Chemistry, Mathematics, and Computer Science — laying the foundation for a career in technology and computing.</p>
+            <div class="tl-tags">
+              <span>PCM</span>
+              <span>Computer Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 — Projects</span>
+        <h2 class="section-title">Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">01</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Chatbot</h3>
+          <p class="project-desc">A conversational AI chatbot built with Python that uses NLP techniques to answer user queries intelligently, featuring intent recognition and context-aware responses.</p>
+          <div class="project-stack">
+            <span>Python</span><span>NLP</span><span>NLTK</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">02</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Student Management System</h3>
+          <p class="project-desc">A full-featured desktop application built in Java for managing student records, grades, attendance, and reports with a clean GUI and SQL database backend.</p>
+          <div class="project-stack">
+            <span>Java</span><span>SQL</span><span>Swing</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">03</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">This very portfolio — designed from scratch with pure HTML, CSS, and JavaScript featuring advanced animations, particle effects, and a fully responsive dark theme.</p>
+          <div class="project-stack">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">04</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Digit Recognizer (ML)</h3>
+          <p class="project-desc">A machine learning model trained on the MNIST dataset to recognize handwritten digits with over 97% accuracy using a Convolutional Neural Network in Python.</p>
+          <div class="project-stack">
+            <span>Python</span><span>TensorFlow</span><span>CNN</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">05</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Weather App</h3>
+          <p class="project-desc">A responsive weather application consuming a public REST API to display real-time weather data, forecasts, and location-based queries with animated weather icons.</p>
+          <div class="project-stack">
+            <span>JavaScript</span><span>REST API</span><span>CSS</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-header">
+            <span class="project-num">06</span>
+            <div class="project-links">
+              <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Data Structures Visualizer</h3>
+          <p class="project-desc">An interactive web app that visually demonstrates data structures (stacks, queues, trees, graphs) and sorting algorithms step-by-step to aid understanding.</p>
+          <div class="project-stack">
+            <span>JavaScript</span><span>HTML Canvas</span><span>C++</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS SECTION ========== -->
+  <section class="section achievements" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 — Achievements</span>
+        <h2 class="section-title">Certificates &amp; Wins</h2>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+          <h4>Python for Everybody</h4>
+          <p>Coursera — University of Michigan</p>
+          <span class="ach-badge">Certificate</span>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-award"></i></div>
+          <h4>Machine Learning Specialization</h4>
+          <p>Coursera — Stanford / DeepLearning.AI</p>
+          <span class="ach-badge">Certificate</span>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+          <h4>Hackathon Finalist</h4>
+          <p>University-level tech hackathon — Top 10 team finish</p>
+          <span class="ach-badge">Achievement</span>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fab fa-google"></i></div>
+          <h4>Google IT Support</h4>
+          <p>Google Career Certificates Program</p>
+          <span class="ach-badge">Certificate</span>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-code"></i></div>
+          <h4>JavaScript Algorithms &amp; DS</h4>
+          <p>freeCodeCamp — 300+ hours curriculum</p>
+          <span class="ach-badge">Certificate</span>
+        </div>
+
+        <div class="ach-card reveal">
+          <div class="ach-icon"><i class="fas fa-star"></i></div>
+          <h4>Academic Excellence Award</h4>
+          <p>Top performer in first-year CS coursework</p>
+          <span class="ach-badge">Achievement</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 — Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Open to opportunities</h3>
+          <p>Whether it's a project collab, internship, or just geeking out about AI — I'm always up for a conversation. Drop me a message!</p>
+          <ul class="contact-details">
+            <li><i class="fas fa-envelope"></i> amandipsingh@example.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Andhra Pradesh, India</li>
+            <li><i class="fas fa-university"></i> Central University of Andhra Pradesh</li>
+          </ul>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" title="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hey Amandip, I'd love to..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>AS<span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2025 <strong>Amandip Singh</strong>. Crafted with <i class="fas fa-heart"></i> &amp; a lot of caffeine.
+      </p>
+      <a href="#hero" class="footer-top-link">Back to top <i class="fas fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP BUTTON ========== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
